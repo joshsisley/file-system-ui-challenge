@@ -1,7 +1,8 @@
-export interface FileNode {
+export interface IFileNode {
   type: 'file' | 'folder';
   name: string;
   modified: string;
-  children: FileNode[] | null;
+  children?: IFileNode[] | null;
   size: number | null;
+  parent?: IFileNode;
 }

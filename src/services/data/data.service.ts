@@ -1,6 +1,6 @@
-import { FileNode } from "../types/FileNode";
+import { IFileNode } from "../../interfaces/FileNode";
 
-const tree: FileNode = {
+const tree: IFileNode = {
   type: 'folder',
   name: 'Files',
   modified: '2022-07-26T06:00:00.000Z',
@@ -104,4 +104,4 @@ const tree: FileNode = {
   ]
 }
 
-export const getFileTree = (): FileNode => tree;
+export const getFileTree = (): IFileNode => tree;

@@ -1,9 +1,10 @@
 // Global Styles
 body {
   background: #eee;
-  color: #333;
+  color: #444;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -31,10 +32,33 @@ body {
   border: 1px solid #ddd;
 }
 
-// Global grid styles
 .row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.children {
+  display: none;
+  margin-left: 0.5rem;
+
+  &:global(.open) {
+    display: block;
+  }
+}
+
+.expand {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  &:global(.open) {
+    transform: rotate(90deg);
+  }
 }
 
 .col {
