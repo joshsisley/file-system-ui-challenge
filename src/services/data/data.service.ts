@@ -82,21 +82,22 @@ const tree: IFileNode = {
     },
     {
       type: 'folder',
-      name: 'System',
+      name: 'Kings Landing',
       modified: '2022-07-26T06:00:00.000Z',
       size: null,
-      children: []
+      children: [
+        {
+          type: 'file',
+          name: 'IronThrone.pdf',
+          modified: '2022-07-26T06:00:10.000Z',
+          size: 76623,
+          children: null
+        },
+      ]
     },
     {
       type: 'file',
-      name: 'RedWedding.pdf',
-      modified: '2022-07-26T06:00:10.000Z',
-      size: 76623,
-      children: null
-    },
-    {
-      type: 'file',
-      name: 'IronThrone.txt',
+      name: 'RedWedding.txt',
       modified: '2022-07-26T06:00:00.000Z',
       size: 83442,
       children: null

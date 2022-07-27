@@ -15,7 +15,6 @@ const FileNode = (node: IFileNode) => {
   nameEl.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log('click detected');
     const event = new CustomEvent('openFolder', { detail: node });
     document.dispatchEvent(event);
   });
@@ -44,6 +43,7 @@ const FileNode = (node: IFileNode) => {
       root.appendChild(rowEl);
       root.appendChild(childrenEl);
     } else {
+      root.className += ' ml-3 pb-1';
       root.appendChild(nameEl);
     }
   }
